@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
+    "esModuleInterop": true,                            
+    "forceConsistentCasingInFileNames": true, 
+    "skipLibCheck": true  ,
     "target": "ESNext",
     "lib": ["ESNext"],
-    "strict": true,
+    "strict": true,  
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
-    "sourceMap": true
+    "sourceMap": true,
   }
 }
