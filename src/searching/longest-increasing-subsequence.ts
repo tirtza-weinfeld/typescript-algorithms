@@ -34,13 +34,13 @@ export function lis(A: string | number[]): typeof A {
     const [_max, _index] = maxIndex(...x);
 
 
-    const parents = (i: number): (string | number)[] =>
+    const subsequence = (i: number): (string | number)[] =>
         i === -1 || i > a ?
             [] :
-            [A[i], ...parents(p[i])];
+            [A[i], ...subsequence(p[i])];
 
 
-    return typeof (A) === "string" ? parents(_index).join('') : parents(_index) as number[];
+    return typeof (A) === "string" ? subsequence(_index).join('') : subsequence(_index) as number[];
 
 }
 

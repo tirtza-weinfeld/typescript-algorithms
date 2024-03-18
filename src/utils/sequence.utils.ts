@@ -41,3 +41,7 @@ export function mapStringToNumbers(value: string) {
     return [...value].map(s => (s.charCodeAt(0) - "a".charCodeAt(0) + 1));
 }
 
+
+
+
+
