@@ -1,10 +1,11 @@
 import { describe, expect, test } from '@jest/globals';
-import { lis, lisLength } from '../../src/searching/longest-increasing-subsequence';
-import { mapStringToNumbers } from '../../src/utils/sequence.utils';
+import { LongestIncreasingSubsequence } from '../src/searching/longest-increasing-subsequence';
+import { mapStringToNumbers } from '../src/utils/sequence.utils';
 
 
 describe('longest increasing subsequence', () => {
 
+    const lisLength = LongestIncreasingSubsequence.length;
     describe('lisLength', () => {
 
         test('should work with strings', () => {
@@ -30,6 +31,8 @@ describe('longest increasing subsequence', () => {
 
 
     describe('lis', () => {
+
+    const lis = LongestIncreasingSubsequence.get;
 
         test('should work with strings', () => {
             expect(lis('carbohydrate')).toBe('abort');

@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { range, reversed } from '../../src/utils/sequence.utils'
+import { range, reversed } from '../src/utils/sequence.utils'
 
 
 //TODO make sense in these tests

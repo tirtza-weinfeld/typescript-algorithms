@@ -9,5 +9,6 @@
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
     "sourceMap": true,
+    "noImplicitOverride": true
   }
 }

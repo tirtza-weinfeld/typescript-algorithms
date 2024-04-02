@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { lcs } from '../../src/searching/longest-common-subsequence';
+import { lcs } from '../src/searching/longest-common-subsequence';
 
 
 describe('longest common subsequence', () => {

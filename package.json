@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Basic Data Structures And Algorithms",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test2" :" jest test/networks.test.ts"
   },
   "repository": {
     "type": "git",
