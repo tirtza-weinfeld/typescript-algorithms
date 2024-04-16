@@ -6,9 +6,12 @@ import { Vertex } from "./vertex";
 
 export class Graph<V extends Vertex = Vertex, E extends Edge<V> = Edge<V>>{
 
-
+    /**@internal */
     vertices = new Map<string, V>();
+    
     edges = new Map<string, E>();
+    
+
 
     constructor(graph?: Graph<V, E>, public directed = false) {
         if (graph) {
@@ -16,6 +19,7 @@ export class Graph<V extends Vertex = Vertex, E extends Edge<V> = Edge<V>>{
         }
 
     }
+
 
 
 
@@ -96,7 +100,10 @@ export class Graph<V extends Vertex = Vertex, E extends Edge<V> = Edge<V>>{
     }
 
 
-    static create = (edges: { [key: string]: string[] }): Graph => {
+    /**
+     * @complexity O(n)
+     */
+    static create(edges: { [key: string]: string[] }): Graph {
         const graph = new Graph();
         for (const u in edges) {
             for (const v of edges[u]) {

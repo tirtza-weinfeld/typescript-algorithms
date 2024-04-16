@@ -71,7 +71,7 @@ export function NestedList<T>(value: T, j: number, i = j) {
 /**
  * @param values Numeric expressions to be evaluated.
  * @returns   
- *  * The larger of a set of supplied numeric expressions.   see {@link max} 
+ *  * The larger of a set of supplied numeric expressions.   see [max](api/utils/max) 
  *  * And the corresponding index
  */
 export function maxIndex(...values: number[]): [max: number, index: number] {

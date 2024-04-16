@@ -6,9 +6,10 @@ import { range } from "../utils"
  * * Having already sorted sub-array A[ :i]
  * * the algorithm repeatedly swaps item A[i] with the item to its left until the left item is no larger than A[i]. 
  * 
- * @time 
- *  * can require `Ω(n^2)` comparisons and `Ω(n^2)` swaps in the worst case
- *  * O(n^2)
+ * @complexity 
+ * `O(n^2)`
+ *  can require `Ω(n^2)` _comparisons_ and `Ω(n^2)` _swaps_ in the worst case
+ *  
  */
 
 export function insertionSort([...list]: number[]){

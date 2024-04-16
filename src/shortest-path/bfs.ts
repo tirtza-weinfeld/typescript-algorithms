@@ -1,5 +1,4 @@
 
-import { List } from "../utils";
 import { search } from "../searching/search";
 import { Graph } from "../data-structures";
 import { Vertex } from "../data-structures/vertex";
@@ -8,6 +7,9 @@ import { Edge } from "../data-structures/edge";
 
 
 
+/**
+ * @internal
+ */
 export function breadthFirstSearch(graph: Graph, s: string): string[] {
     return search(graph, s, 'bfs').order;
 }
@@ -19,7 +21,9 @@ export function bfs(graph: Graph, s: string) {
 
 
 
-
+/**
+ * @internal
+ */
 export function findShortestPath<V extends Vertex, E extends Edge<V>>(graph: Graph<V, E>, s: string, t: string) {
     const parent = search(graph, s, 'bfs').parent;
     if (!parent) return;

@@ -1,3 +1,4 @@
+
 export class DisjointSet {
 
 
@@ -7,7 +8,7 @@ export class DisjointSet {
 
     /**
      * Initializes x as a lone node. 
-     * @time Θ(1) in the worst case
+     * @complexity Θ(1) in the worst case
      * @param x 
      */
     makeSet(x: string) {
@@ -19,7 +20,7 @@ export class DisjointSet {
 
     /**
      * Climbs the tree containing x to the root. 
-     * @time Θ(height)
+     * @complexity Θ(height)
      * @param x 
      * @returns 
      */
@@ -47,8 +48,8 @@ export class DisjointSet {
 
     /**
      * * Climbs to the roots of the trees containing x and y 
-     * * and {@link merge}s parents sets `rep[y]` , `rep[x]`. 
-     * @time  Θ(height)
+     * * and [merge](api/data-structures/DisjointSet#merge)s parents sets `rep[y]` , `rep[x]`. 
+     * @complexity  Θ(height)
      * @param x 
      * @param y 
      */
@@ -105,6 +106,7 @@ class Tree {
      * Define **`height(<X>)`**  of node <X> to be max depth of any node in the subtree rooted at <X>
      */
     constructor(public key: string, public height = 0) { }
+
 
     [Symbol.toPrimitive](value: any) {
         return typeof value === "string" ? this.key :

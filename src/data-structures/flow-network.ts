@@ -6,11 +6,11 @@ import { Vertex } from "./vertex";
 
 
 
-export class ResidualNetwork extends Graph<Vertex, ResidualEdge<Vertex>>{
+export class ResidualNetwork extends Graph<Vertex, ResidualEdge<Vertex>> {
 
 
 
-    static buildResidualGraph = (graph: Network) => {
+    static buildResidualGraph(graph: Network) {
 
         let residualGraph: ResidualNetwork = new ResidualNetwork();
 
@@ -27,7 +27,7 @@ export class ResidualNetwork extends Graph<Vertex, ResidualEdge<Vertex>>{
 }
 
 
-export class Network extends Graph<Vertex, NetworkEdge<Vertex>>{
+export class Network extends Graph<Vertex, NetworkEdge<Vertex>> {
 
 
 
@@ -43,11 +43,11 @@ export class Network extends Graph<Vertex, NetworkEdge<Vertex>>{
 
 
 
-    augmentFlow = (u: string, v: string, flowIncrease: number) =>
-        this.getEdge(u, v)!.flow += flowIncrease;
+    augmentFlow(u: string, v: string, flowIncrease: number) {
+        return this.getEdge(u, v)!.flow += flowIncrease;
+    }
 
-
-    augmentPath = (path: [string, string][], flow: number) => {
+    augmentPath(path: [string, string][], flow: number) {
         for (const [u, v] of path) {
             const edge = this.getEdge(u, v);
             if (edge)
@@ -59,10 +59,10 @@ export class Network extends Graph<Vertex, NetworkEdge<Vertex>>{
 
 
 
-    flow(source: string) {
-        return this.getEdgeNeighbors(source)!
+    flow = (source: string) =>
+        this.getEdgeNeighbors(source)!
             .reduce((maxFlow, edge) => maxFlow + edge.flow!, 0);
 
-    }
+
 
 }

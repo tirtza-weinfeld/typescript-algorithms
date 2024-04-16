@@ -5,7 +5,12 @@ import { max, NestedList, range, reversed } from "../utils";
 /**
  * 
  * Given two strings A and B, Finds the length of a longest (not necessarily contiguous) subsequence of A that is also a subsequence of B.
- * example
+ * 
+ * @complexity `O(|A|·|B|)`
+ *  *  \#subproblems: `(|A| + 1) · (|B| + 1)`
+ *  *  work per subproblem: `O(1)`
+ * 
+ * @example
  *  ```
  *         A = hieroglyphology
  *         B = michaelangelo
@@ -58,7 +63,6 @@ import { max, NestedList, range, reversed } from "../utils";
  *  *  \#subproblems: `(|A| + 1) · (|B| + 1)`
  *  *  work per subproblem: `O(1)`
  *  *  **`O(|A|·|B|) running time`**
- * 
  * 
  */
 export function lcs(A: string, B: string) {

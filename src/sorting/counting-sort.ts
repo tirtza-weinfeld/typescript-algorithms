@@ -44,11 +44,11 @@ export function countingSort([...list]: number[], digit?: number, radix?: number
  * moves each item into a chain and then back into place
  * @param list of non-negative keys
  * @param key 
+ * @internal
  */
-
-export function countingSortImplementationB(list: number[]): number[];
-export function countingSortImplementationB(list: number[], digit: number, radix: number): number[];
-export function countingSortImplementationB([...list]: number[], digit?: number, radix?: number) {
+ function countingSortImplementationB(list: number[]): number[];
+ function countingSortImplementationB(list: number[], digit: number, radix: number): number[];
+ function countingSortImplementationB([...list]: number[], digit?: number, radix?: number) {
 
 
     const u = radix ?? 1 + max(...list);

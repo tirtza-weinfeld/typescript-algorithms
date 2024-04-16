@@ -2,18 +2,18 @@ import { List, max, maxIndex, range, reversed } from "../utils";
 
 
 /**
- *
  * 
  * Given a string `A`, find a longest (not necessarily contiguous) subsequence of A that strictly
  * increases (lexicographically).
  * 
  * @example
- *  ```
- * A = carbohydrate, Solution = abort, of length 5
+ *  ```ts
+ * A = carbohydrate;
+ * Solution = abort, of length 5
  * ```
  * 
  * @description
- * 
+ *
  * ## Dynamic programming solution
  * 
  * * **Subproblems**
@@ -49,17 +49,17 @@ import { List, max, maxIndex, range, reversed } from "../utils";
  *    *  work per subproblem: `O(|A|)`
  *    *  **`O(|A|^2)` running time**
  *    *  can speed up to **`O(|A|log A|)`** by doing only `O(log|A|)` work per subproblem, via AVL tree augmentation
- *  
+
  * 
  */
 
 
-export class LongestIncreasingSubsequence {
+export class LIS {
 
     /**
      * For simplicity will start with solely calculating the length of the Longest Increasing Subsequence(which is essentially equivalent,
      * but simplifies the code by removing the the parent overhead code).
-     * @time O(|A|^2)
+     * @complexity O(|A|^2)
      * @param A sequence
      * @returns the __length__ of a longest (not necessarily contiguous) subsequence of A that strictly increases
      */
